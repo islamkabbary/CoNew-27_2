@@ -1,0 +1,14 @@
+title: blogs
+template: layout-blog
+layout: layout-blog
+revisions: false
+route: 'blogs/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'

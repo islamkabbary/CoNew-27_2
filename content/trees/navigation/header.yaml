@@ -1,0 +1,84 @@
+tree:
+  -
+    id: cb5c8402-f09f-4755-82fc-8e33c2754dd0
+    title: home
+  -
+    id: 06feb4f0-1693-43fe-84b6-d68e2278d817
+    title: 'About us'
+    url: about-us
+  -
+    id: 01b250f9-db89-4397-afc0-41e004fdea48
+    title: 'English courses'
+    children:
+      -
+        id: e2b74321-9269-4441-b312-50888700d48b
+        title: 'General English courses'
+        url: general-english-courses
+      -
+        id: 669a88f2-114e-4d3c-8263-7d3ea8b1e250
+        title: 'English language for children'
+        url: kids-english-program
+      -
+        id: cee784ad-928b-43de-99b4-cc5bf99c3950
+        title: 'TOEFL test preparation course'
+        url: toefl-preparation-course
+      -
+        id: ca97e6bb-41bb-4037-bc9f-0db8e38d1fff
+        title: 'IELTS test preparation course'
+        url: ielts-preparation-course
+  -
+    id: 040e9a5e-4d0e-4a78-ad9d-df0724bd2a9b
+    title: 'Distance courses'
+    children:
+      -
+        id: 0d466cd6-1fa4-440f-bdc1-9f096274374a
+        title: 'English language'
+        url: online-english
+      -
+        id: 687a568f-2aed-4cb2-867f-f45013c00594
+        title: 'Chinese language'
+        url: online-learn-chinese
+  -
+    id: 51ce8fe3-d035-4611-a07f-f06f0c959135
+    title: 'Administrative courses'
+    children:
+      -
+        id: 7cae4d21-c0aa-4947-8296-5a40f2e81f51
+        title: HR
+        url: hr-online
+      -
+        id: 65c6b643-15da-45b5-9881-b9e76037a46e
+        title: 'Accounting for non-accountants'
+        url: accounting-for-non-accountants
+      -
+        id: 73c6b4d7-d837-4163-aa6f-aa2b9f48bcd9
+        title: hr-diploma
+        url: hr-diploma
+      -
+        id: f050d561-424a-4465-833e-581cd91669b4
+        title: 'Technical courses'
+        children:
+          -
+            id: 960237e1-fb46-46ce-a873-cc88cbf1f175
+            title: 'computer skills'
+            url: computer-skills-in-office-working
+          -
+            id: 80f9eda6-9a1b-44d9-aadd-e2883dffe11d
+            title: 'Data science and artificial intelligence course'
+            url: artificial-intelligence-ai-course
+          -
+            id: 2cfd4298-aced-46a7-86ee-6bdec0f21ea2
+            title: 'Cyber security'
+            url: cyber-security
+          -
+            id: b4af7491-5595-48e8-9c43-4988b5897068
+            title: 'Graphic Design'
+            url: graphic-design-course
+  -
+    id: b23c53ce-ab9b-4fa1-8ed8-2972bdf57812
+    title: 'all offers'
+    url: all-offers
+  -
+    id: f999ecfd-2214-4ea6-84e5-3e21df2cb96c
+    title: blog
+    url: blogs

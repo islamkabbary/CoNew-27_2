@@ -1,0 +1,82 @@
+title: social
+data:
+  main:
+    -
+      id: lenyxc3t
+      url: 'https://www.facebook.com/Proleadersco.sa'
+      show:
+        - 'is header'
+        - 'is footer'
+      type: new_set
+      enabled: true
+      is_header: true
+      is_footer: true
+      icon: facebook.png
+      icon_fontawesome: icon-facebook-f
+    -
+      id: lenyz0ew
+      url: 'https://twitter.com/proleadersco2'
+      show:
+        - 'is header'
+        - 'is footer'
+      type: new_set
+      enabled: true
+      is_header: true
+      is_footer: true
+      icon: twitter.png
+      icon_fontawesome: icon-twitter
+    -
+      id: lenyzmns
+      url: 'https://www.instagram.com/proleadersco/'
+      show:
+        - 'is header'
+        - 'is footer'
+      type: new_set
+      enabled: true
+      is_header: true
+      is_footer: true
+      icon: instagram.png
+      icon_fontawesome: icon-instagram
+    -
+      id: lenz4zux
+      url: 'https://www.tiktok.com/@proleadersco'
+      show:
+        - 'is header'
+        - 'is footer'
+      type: new_set
+      enabled: true
+      is_header: true
+      is_footer: true
+      icon: tik-tok.png
+      icon_fontawesome: icon-tiktok
+    -
+      id: lenz5box
+      url: 'https://www.snapchat.com/add/proleaders'
+      show:
+        - 'is footer'
+      type: new_set
+      enabled: true
+      is_header: false
+      is_footer: true
+      icon: snapchat-b.png
+      icon_fontawesome: icon-snapchat-square
+    -
+      id: lenz69bv
+      url: 'https://sa.linkedin.com/company/proleaders-inistitutes'
+      show:
+        - 'is footer'
+      type: new_set
+      enabled: true
+      is_header: false
+      is_footer: true
+      icon: linkedin-b.png
+      icon_fontawesome: icon-linkedin-square
+    -
+      id: lewom38e
+      url: 'tel:+966920003365'
+      is_header: true
+      is_footer: false
+      type: new_set
+      enabled: true
+      icon: phone-1678098898.png
+      icon_fontawesome: icon-phone

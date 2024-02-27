@@ -1,0 +1,13 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: email
+        field:
+          display: email
+          type: list
+          icon: list
+          listable: hidden
+          instructions_position: above
+          visibility: visible

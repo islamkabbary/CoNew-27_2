@@ -1,0 +1,21 @@
+title: brief
+data:
+  brief:
+    -
+      id: leo2ric1
+      title: 'About us'
+      slug: /about-us
+      type: new_set
+      enabled: true
+    -
+      id: leo2rq1r
+      title: blog
+      slug: blogs
+      type: new_set
+      enabled: true
+    -
+      id: leo2s74n
+      title: 'contact us'
+      slug: contact-us
+      type: new_set
+      enabled: true

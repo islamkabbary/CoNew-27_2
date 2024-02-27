@@ -28,10 +28,6 @@
             document.documentElement.lang = this.lang;
         }
     }">
-@php
-    $title = 'home';
-    $title_ar = 'الرئيسية';
-@endphp
 @if (App::getLocale() == 'ar')
     <x-head-component :title=$title_ar></x-head-component>
 @else
@@ -54,7 +50,7 @@
     <main class="bg-main bg-cover bg-right bg-no-repeat relative overflow-hidden {{ $classMain ?? '' }}">
         @php $pass_slug = isset($slug)? $slug->value() : '' ; @endphp
         <x-navbar-component :slug="$pass_slug" />
-        {{-- {!! \App\Models\ShortCode::compile($main) !!} --}}
+        {!! \App\Models\ShortCode::compile($main) !!}
         @if (isset($errors))
             @if ($errors->has('error'))
                 <div class="alert alert-danger fixed top-5 right-5 z-100 p-3 text-white bg-red-700 rounded"
@@ -72,7 +68,7 @@
             @endif
         @endif
     </main>
-    {{-- {!! \App\Models\ShortCode::compile($content ?? '') !!} --}}
+    {!! \App\Models\ShortCode::compile($content ?? '') !!}
     {{-- @livewire('login-and-register-component', key('login-and-register-component' . mt_rand(1, 1000))) --}}
     {{-- @livewire('footer-shopping-cart-component', key('footer-shopping-cart-component' . mt_rand(1, 1000))) --}}
 </body>

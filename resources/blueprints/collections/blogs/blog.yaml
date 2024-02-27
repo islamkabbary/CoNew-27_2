@@ -1,0 +1,474 @@
+title: blog
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: short_content
+            field:
+              config: 'code configer'
+              display: 'short content'
+              type: tinymce_cloud
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: main_content
+            field:
+              collapse: false
+              previews: true
+              sets:
+                new_set:
+                  display: 'New Set'
+                  fields:
+                    -
+                      handle: main_title
+                      field:
+                        input_type: text
+                        antlers: false
+                        display: 'main title'
+                        type: text
+                        icon: text
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+                    -
+                      handle: content_main_title
+                      field:
+                        config: 'code configer'
+                        display: 'content main title'
+                        type: tinymce_cloud
+                        icon: textarea
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+                    -
+                      handle: list_content
+                      field:
+                        collapse: false
+                        previews: true
+                        sets:
+                          new_set:
+                            display: 'New Set'
+                            fields:
+                              -
+                                handle: title_list
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  display: 'title list'
+                                  type: text
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                              -
+                                handle: list
+                                field:
+                                  display: List
+                                  type: list
+                                  icon: list
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                        display: 'List content'
+                        type: replicator
+                        icon: replicator
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+              display: 'main content'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: full_content
+            field:
+              collapse: false
+              previews: true
+              sets:
+                new_set:
+                  display: 'New Set'
+                  fields:
+                    -
+                      handle: sub_title
+                      field:
+                        input_type: text
+                        antlers: false
+                        display: 'sub title'
+                        type: text
+                        icon: text
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+                    -
+                      handle: sub_content
+                      field:
+                        config: 'code configer'
+                        display: 'sub content'
+                        type: tinymce_cloud
+                        icon: textarea
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+                    -
+                      handle: full_list
+                      field:
+                        collapse: false
+                        previews: true
+                        sets:
+                          new_set:
+                            display: 'New Set'
+                            fields:
+                              -
+                                handle: title_list
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  display: 'title list'
+                                  type: text
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                              -
+                                handle: item_list
+                                field:
+                                  display: 'item list'
+                                  type: list
+                                  icon: list
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                              -
+                                handle: sub_content_list
+                                field:
+                                  config: 'code configer'
+                                  display: 'sub content list'
+                                  type: tinymce_cloud
+                                  icon: textarea
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                        display: 'full list'
+                        type: replicator
+                        icon: replicator
+                        listable: hidden
+                        instructions_position: above
+                        visibility: visible
+              display: 'full content'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              from: title
+              generate: true
+              show_regenerate: false
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: canonical_link
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'canonical Link'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: order
+            field:
+              display: order
+              type: integer
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              hide_display: false
+          -
+            handle: category
+            field:
+              mode: select
+              create: true
+              collections:
+                - blog_category
+              display: category
+              type: entries
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              max_items: 1
+              validate:
+                - required
+          -
+            handle: small_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: 'small image'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              show_set_alt: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: main_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: 'main image'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: minutes_read
+            field:
+              display: 'minutes read'
+              type: integer
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: read_also
+            field:
+              max_items: 4
+              mode: default
+              create: false
+              collections:
+                - blogs
+              display: 'Read also'
+              type: entries
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              mode: single
+              time_enabled: false
+              time_seconds_enabled: false
+              full_width: false
+              inline: false
+              columns: 1
+              rows: 1
+              hide_display: false
+          -
+            handle: number_likes
+            field:
+              display: 'number likes'
+              type: integer
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_title
+            field:
+              type: text
+          -
+            handle: description
+            field:
+              antlers: false
+              display: Description
+              type: textarea
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: meta_tags
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: false
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              display: 'Meta Tags'
+              type: code
+              icon: code
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+  test:
+    display: test
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: main_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'main title (required)'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: sub_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'sub title (not required)'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: questions
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: question_header
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Question header'
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: answers
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: answer_header
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: answer_header
+                                          icon: text
+                                          width: 50
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          hide_display: false
+                                      -
+                                        handle: answer_status
+                                        field:
+                                          default: false
+                                          type: toggle
+                                          display: 'answer status'
+                                          icon: toggle
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          hide_display: false
+                            type: replicator
+                            display: answers
+                            icon: replicator
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                            max_sets: 4
+              type: replicator
+              display: questions
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

@@ -1,0 +1,331 @@
+title: package
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: interact_via_live_broadcast
+            field:
+              default: false
+              type: toggle
+              display: 'Interact via live broadcast'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              if:
+                category: 'equals باقات الدورات عن بعد'
+              width: 33
+          -
+            handle: daily_conversations
+            field:
+              default: false
+              type: toggle
+              display: 'daily conversations'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 33
+          -
+            handle: weekly_follow
+            field:
+              default: false
+              type: toggle
+              display: 'weekly follow'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 33
+          -
+            handle: lesson_exams
+            field:
+              default: false
+              type: toggle
+              display: 'lesson exams'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 33
+          -
+            handle: online_lessons_available
+            field:
+              default: false
+              type: toggle
+              display: 'online lessons available'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 33
+          -
+            handle: free_placement_test
+            field:
+              default: false
+              type: toggle
+              display: 'free placement test'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+              width: 33
+          -
+            handle: registered_free_courses
+            field:
+              default: false
+              type: toggle
+              display: 'registered free courses'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+              width: 33
+          -
+            handle: number_of_levels
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'number of levels'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+              width: 33
+          -
+            handle: package_output
+            field:
+              type: list
+              display: 'package output'
+              icon: list
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: package_system_field
+            field:
+              endpoint: package
+              display: 'Packages System Field'
+              type: product_system
+              icon: product_system
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: plus_offer_to_package
+            field:
+              mode: default
+              create: false
+              collections:
+                - offers
+              type: entries
+              display: 'plus offer to package'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              duplicate: false
+              hide_display: false
+          -
+            handle: category
+            field:
+              options:
+                'اللغة الانجليزية عن بعد': null
+                'اللغة الانجليزية حضوري': null
+                'الدورات الادارية': null
+              multiple: false
+              clearable: false
+              searchable: true
+              taggable: false
+              push_tags: false
+              cast_booleans: false
+              display: category
+              type: select
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  card:
+    display: card
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: content_arabic
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'content arabic'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+              always_save: false
+          -
+            handle: main_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'main image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+              always_save: true
+              max_files: 1
+          -
+            handle: optional_image
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            mode: list
+                            container: assets
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                            validate:
+                              - required
+                        -
+                          handle: start_date
+                          field:
+                            mode: single
+                            inline: false
+                            full_width: false
+                            columns: 1
+                            rows: 1
+                            time_enabled: false
+                            time_seconds_enabled: false
+                            type: date
+                            display: 'start date'
+                            icon: date
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                            format: yyyy-mm-dd
+                        -
+                          handle: end_date
+                          field:
+                            mode: single
+                            inline: false
+                            full_width: false
+                            columns: 1
+                            rows: 1
+                            time_enabled: false
+                            time_seconds_enabled: false
+                            type: date
+                            display: 'end date'
+                            icon: date
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: 'optional Image'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              max_sets: 1
+          -
+            handle: new_offers
+            field:
+              default: false
+              type: toggle
+              display: 'new offers'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: order_show
+            field:
+              type: integer
+              display: order_show
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

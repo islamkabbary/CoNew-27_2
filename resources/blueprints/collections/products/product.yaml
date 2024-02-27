@@ -1,0 +1,510 @@
+title: product
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: course_details
+            field:
+              collapse: false
+              previews: true
+              sets:
+                main:
+                  display: Main
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            display: title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: content
+                          field:
+                            antlers: false
+                            display: content
+                            type: tinymce_cloud
+                            icon: textarea
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            config: 'code configer'
+                            hide_display: false
+              display: 'Course details'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              fullscreen: true
+              hide_display: false
+          -
+            handle: list_learning
+            field:
+              collapse: false
+              previews: true
+              sets:
+                main:
+                  display: Main
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            display: title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                        -
+                          handle: sub_content
+                          field:
+                            antlers: false
+                            display: 'sub content'
+                            type: tinymce_cloud
+                            icon: textarea
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            config: 'code configer'
+                            hide_display: false
+                        -
+                          handle: content
+                          field:
+                            display: content
+                            type: list
+                            icon: list
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+              display: 'list learning'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              fullscreen: true
+              hide_display: false
+          -
+            handle: course_details_after_list
+            field:
+              collapse: false
+              previews: true
+              sets:
+                main:
+                  display: Main
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            input_type: text
+                            antlers: false
+                            display: title
+                            type: text
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                        -
+                          handle: content
+                          field:
+                            antlers: false
+                            display: content
+                            type: tinymce_cloud
+                            icon: textarea
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            config: 'code configer'
+                            hide_display: false
+              display: 'Course details after list'
+              type: replicator
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              fullscreen: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: product_system_field
+            field:
+              display: 'Product System Field'
+              type: product_system
+              icon: product_system
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              endpoint: course
+              validate:
+                - required
+          -
+            handle: is_installment_package
+            field:
+              default: false
+              type: toggle
+              display: 'is installment package'
+              icon: toggle
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: is_offer
+            field:
+              default: false
+              type: toggle
+              display: 'is offer'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              width: 50
+          -
+            handle: main_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: 'main image'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              validate:
+                - required
+          -
+            handle: category
+            field:
+              multiple: false
+              clearable: false
+              searchable: true
+              taggable: false
+              push_tags: false
+              cast_booleans: false
+              display: category
+              type: select
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              options:
+                'دورات اللغة الانجليزية': null
+                'تدريب اونلاين ': null
+                'الدورات الادارية': null
+                'الدورات التقنية': null
+              hide_display: false
+              width: 50
+          -
+            handle: word_next_to_price
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'word next to price'
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: number_levels
+            field:
+              display: 'number of levels'
+              type: integer
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              width: 50
+          -
+            handle: course_hours
+            field:
+              input_type: text
+              antlers: false
+              display: 'Course Hours'
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              width: 50
+          -
+            handle: level_duration
+            field:
+              input_type: text
+              antlers: false
+              display: 'level duration'
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              width: 50
+          -
+            handle: word_under_duration
+            field:
+              input_type: text
+              antlers: false
+              default: 'Duration the level'
+              display: 'word under duration'
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              width: 50
+          -
+            handle: lesson_duration
+            field:
+              input_type: text
+              antlers: false
+              display: 'Lesson duration'
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              width: 50
+  card:
+    display: card
+    sections:
+      -
+        fields:
+          -
+            handle: small_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              max_files: 1
+              display: 'small image'
+              type: assets
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+              validate:
+                - required
+                - image
+              width: 50
+          -
+            handle: optional_image
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            mode: list
+                            container: assets
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: image
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                            validate:
+                              - required
+                        -
+                          handle: start_date
+                          field:
+                            mode: single
+                            inline: false
+                            full_width: false
+                            columns: 1
+                            rows: 1
+                            time_enabled: false
+                            time_seconds_enabled: false
+                            type: date
+                            display: 'start date'
+                            icon: date
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                            format: yyyy-mm-dd
+                        -
+                          handle: end_date
+                          field:
+                            mode: single
+                            inline: false
+                            full_width: false
+                            columns: 1
+                            rows: 1
+                            time_enabled: false
+                            time_seconds_enabled: false
+                            type: date
+                            display: 'end date'
+                            icon: date
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: 'optional Image'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              max_sets: 1
+              width: 50
+          -
+            handle: content_arabic
+            field:
+              input_type: text
+              antlers: false
+              display: content_arabic
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: content_english
+            field:
+              input_type: text
+              antlers: false
+              display: content_english
+              type: text
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: special
+            field:
+              default: false
+              display: special
+              type: toggle
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              always_save: false
+          -
+            handle: number_customer_reviews
+            field:
+              display: 'Number customer reviews'
+              type: integer
+              icon: integer
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_title
+            field:
+              type: text
+          -
+            handle: description
+            field:
+              antlers: false
+              display: Description
+              type: textarea
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+          -
+            handle: meta_tags
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: false
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              display: 'Meta Tags'
+              type: code
+              icon: code
+              listable: hidden
+              instructions_position: above
+              visibility: visible

@@ -1,0 +1,21 @@
+title: 'join us'
+data:
+  join_us:
+    -
+      id: leo2jool
+      title: packages
+      slug: /all-packages
+      type: new_set
+      enabled: true
+    -
+      id: leo2jxp0
+      title: 'Available courses'
+      slug: /all-courses
+      type: new_set
+      enabled: true
+    -
+      id: leo2ka3o
+      title: 'All offers'
+      slug: /all-offers
+      type: new_set
+      enabled: true

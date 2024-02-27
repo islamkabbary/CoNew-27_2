@@ -1,0 +1,33 @@
+title: address
+data:
+  address:
+    -
+      id: leo14z1l
+      title: 'Riyadh, Al-Rayyan branch'
+      url: 'https://www.google.com/maps/place/%D9%85%D8%B9%D9%87%D8%AF+%D8%A8%D8%B1%D9%88%D9%84%D9%8A%D8%AF%D8%B1%D8%B2+-+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D9%86+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%E2%80%AD/@24.7025148,46.7696149,17z/data=!3m1!4b1!4m5!3m4!1s0x3e2f013a543dadb3:0xbff91dc6b82ad3c5!8m2!3d24.7025099!4d46.7718036?hl=en&shorturl=1'
+      type: new_set
+      enabled: true
+    -
+      id: ll1wlxdf
+      title: 'Riyadh, Al-Morog branch'
+      url: 'https://www.google.com/maps/place/%D9%85%D8%B9%D9%87%D8%AF+%D8%A8%D8%B1%D9%88%D9%84%D9%8A%D8%AF%D8%B1%D8%B2+-+%D8%A7%D9%84%D9%85%D8%B1%D9%88%D8%AC+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%E2%80%AD/@24.764616,46.66119,17z/data=!3m1!4b1!4m6!3m5!1s0x3e2ee39335aa7881:0x971b0b9ac7ea20a1!8m2!3d24.764616!4d46.66119!16s%2Fg%2F11sw3cjcnb?entry=ttu'
+      type: new_set
+      enabled: true
+    -
+      id: leo15ggr
+      title: 'Jeddah, Azizia branch'
+      url: 'https://www.google.com/maps?cid=5897648384904809410&hl=en&_ga=2.119656591.603943986.1630752523-62975958.1624896686'
+      type: new_set
+      enabled: true
+    -
+      id: leo15u5v
+      title: 'Jeddah, Al-Hamdaniya branch'
+      url: 'https://www.google.com/maps?cid=13267802666583379308&hl=en&_ga=2.53793967.603943986.1630752523-62975958.1624896686'
+      type: new_set
+      enabled: true
+    -
+      id: leo16exa
+      title: 'Jeddah Al-Fayhaa branch'
+      url: 'https://www.google.com/maps?cid=13161163806272527528&hl=en&_ga=2.226283805.603943986.1630752523-62975958.1624896686'
+      type: new_set
+      enabled: true
