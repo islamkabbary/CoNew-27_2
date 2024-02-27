@@ -14,9 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('home');
-=======
     return view('components.head-component');
->>>>>>> parent of afec3de (first header)
 });
