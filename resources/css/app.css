@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Saira';
+    src: url('../../public/fonts/somar-sans/SomarSans-Medium.ttf') format('woff2')
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.main_loader {
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.loader {
+    position: absolute;
+    width: 120px !important;
+    height: 120px !important;
+    border: 16px solid #f3f3f3;
+    left: 0;
+    right: 0;
+    top: 45%;
+    margin: auto;
+    z-index: 999;
+    border-top: 16px solid #8b0303;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8b0303;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #929292;
+    background-image: linear-gradient(#8b0303, #fff, #8b0303)
+}
