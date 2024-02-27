@@ -14,7 +14,6 @@
     {{-- <meta name="facebook-domain-verification" content="fieo0ueleucvr4hnl8l11r8lghqdap" /> --}}
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
     {{-- <script src="https://checkout.tabby.ai/tabby-promo.js"></script> --}}
     {{-- {!! $custom_tag_seo->custom_head ?? '' !!} --}}
     @livewireStyles
